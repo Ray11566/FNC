@@ -145,7 +145,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTAwIiBvcGFjaXR5PSIwLjA1Ij48cGF0aCBmaWxsPSIjRkY2NjAwIiBkPSJNNDAgMTBoMTIwdjMwSDE0MHY1MEg0MFY0MEg2MHYtMzB6Ii8+PHBhdGggZmlsbD0iI0ZGNjYwMCIgZD0iTTYwIDQwaDQwdjUwSDYweiIvPjxwYXRoIGZpbGw9IiNGRjY2MDAiIGQ9Ik0xMDAgNDBoNDB2NTBoLTQweiIvPjwvc3ZnPg==');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTAwIiBvcGFjaXR5PSIwLjA1Ij48cGF0aCBmaWxsPSIjRkY2NjAwIiBkPSJNNDAgMTBoMTIwdjMwSDE0MHY1MEg0MFY0MEg2MHYtMzB6Ii8+PHBhdGggZmlsbD0iI0ZGNjYwMCIgZD0iTTYwIDQwaDQwdjUwSDYweiIvPjxwYXRoIGZpbGwPSIjRkY2NjAwIiBkPSJNMTAwIDQwaDQwdjUwaC00MHoiLz48L3N2Zz4=');
             background-repeat: repeat;
             background-size: 150px;
             z-index: 0;
@@ -228,6 +228,97 @@
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        /* Social Media Banners */
+        .social-banners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .social-banner {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--dark) 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .social-banner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 102, 0, 0.3);
+        }
+
+        .banner-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .instagram-banner .banner-icon {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+        }
+
+        .youtube-banner .banner-icon {
+            background-color: #FF0000;
+            color: white;
+        }
+
+        .banner-content {
+            flex: 1;
+        }
+
+        .banner-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .banner-content p {
+            color: #cccccc;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .follow-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .follow-btn:hover {
+            background-color: #ff8533;
+            transform: translateY(-2px);
+        }
+
+        .banner-follower-count {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #cccccc;
         }
 
         /* Team Logo Section */
@@ -744,7 +835,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTAwIiBvcGFjaXR5PSIwLjAzIj48cGF0aCBmaWxsPSIjRkY2NjAwIiBkPSJNNDAgMTBoMTIwdjMwSDE0MHY1MEg0MFY0MEg2MHYtMzB6Ii8+PHBhdGggZmlsbD0iI0ZGNjYwMCIgZD0iTTYwIDQwaDQwdjUwSDYweiIvPjxwYXRoIGZpbGw9IiNGRjY2MDAiIGQ9Ik0xMDAgNDBoNDB2NTBoLTQweiIvPjwvc3ZnPg==');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTAwIiBvcGFjaXR5PSIwLjAzIj48cGF0aCBmaWxsPSIjRkY2NjAwIiBkPSJNNDAgMTBoMTIwdjMwSDE0MHY1MEg0MFY0MEg2MHYtMzB6Ii8+PHBhdGggZmlsbD0iI0ZGNjYwMCIgZD0iTTYwIDQwaDQwdjUwSDYweiIvPjxwYXRoIGZpbGwPSIjRkY2NjAwIiBkPSJNMTAwIDQwaDQwdjUwaC00MHoiLz48L3N2Zz4=');
             background-repeat: repeat;
             background-size: 200px;
             z-index: 0;
@@ -911,6 +1002,29 @@
             color: var(--text);
         }
 
+        /* Instagram Badge on Player Card */
+        .instagram-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            transition: transform 0.3s;
+        }
+
+        .instagram-badge:hover {
+            transform: scale(1.1);
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .about-content,
@@ -920,6 +1034,10 @@
 
             .hero-content h2 {
                 font-size: 2.8rem;
+            }
+
+            .social-banners {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -956,6 +1074,25 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+
+            .social-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .banner-icon {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .banner-follower-count {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-top: 15px;
+                display: inline-block;
+            }
         }
 
         @media (max-width: 576px) {
@@ -989,6 +1126,10 @@
             
             .team-info h3 {
                 font-size: 2rem;
+            }
+
+            .social-banners {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1039,6 +1180,50 @@
                 <div class="team-start">
                     <h3>Team Established</h3>
                     <p>October 1, 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Banners -->
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Follow Us</h2>
+                </div>
+                <div class="social-banners">
+                    <!-- Instagram Banner -->
+                    <div class="social-banner instagram-banner">
+                        <div class="banner-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="banner-content">
+                            <h3>Team FNATIC ORG</h3>
+                            <p>Follow our official Instagram for behind-the-scenes content, player updates, tournament news, and exclusive content from our BGMI team.</p>
+                            <a href="https://www.instagram.com/team_fnaticorg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="follow-btn">
+                                <i class="fab fa-instagram"></i> Follow @team_fnaticorg
+                            </a>
+                        </div>
+                        <div class="banner-follower-count">
+                            <i class="fas fa-users"></i> 10K+ Followers
+                        </div>
+                    </div>
+
+                    <!-- YouTube Banner -->
+                    <div class="social-banner youtube-banner">
+                        <div class="banner-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="banner-content">
+                            <h3>FNC Sports </h3>
+                            <p>Subscribe to our YouTube channel for gameplay highlights, tournament matches, strategy guides, and exclusive team content.</p>
+                            <a href="https://www.youtube.com/@Fnc-Sports440" target="_blank" class="follow-btn">
+                                <i class="fab fa-youtube"></i> Subscribe @Fnc-Sports440
+                            </a>
+                        </div>
+                        <div class="banner-follower-count">
+                            <i class="fas fa-users"></i> 5K+ Subscribers
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1274,15 +1459,19 @@
                 
                 <!-- Player Cards -->
                 <div class="players-grid">
-                    <!-- Player 1 -->
+                    <!-- Player 1 - FNCxEliteRaYoP with Instagram Badge -->
                     <div class="player-card">
                         <div class="player-image">
                             <img src="https://images.unsplash.com/photo-1621638678571-8b7d6769fe26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="FNCxEliteRaYoP">
+                            <!-- Instagram Badge -->
+                            <a href="https://www.instagram.com/ig__fncxeliterayop?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-badge">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                         <div class="player-info">
                             <h3>FNCxEliteRaYoP</h3>
                             <span class="player-role">👑 IGL (In-Game Leader)</span>
-                            <p>Strategic mastermind with exceptional game sense and leadership qualities in BGMI.</p>
+                            <p>Strategic mastermind with exceptional game sense and leadership qualities in BGMI. Follow him on Instagram for exclusive content.</p>
                             <div class="player-stats">
                                 <div class="stat">
                                     <div class="stat-value">1.32</div>
@@ -1296,13 +1485,13 @@
                             <div class="player-social">
                                 <div class="social-section">
                                     <div class="social-title">Instagram</div>
-                                    <a href="#" class="social-link instagram">
+                                    <a href="https://www.instagram.com/ig__fncxeliterayop?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-link instagram">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </div>
                                 <div class="social-section">
                                     <div class="social-title">YouTube</div>
-                                    <a href="#" class="social-link youtube">
+                                    <a href="https://www.youtube.com/@Fnc-Sports440" target="_blank" class="social-link youtube">
                                         <i class="fab fa-youtube"></i>
                                     </a>
                                 </div>
@@ -1564,9 +1753,9 @@
                         <h3>Follow Our BGMI Team</h3>
                         <div class="social-links">
                             <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/team_fnaticorg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-twitch"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.youtube.com/@Fnc-Sports440" target="_blank"><i class="fab fa-youtube"></i></a>
                             <a href="#"><i class="fab fa-discord"></i></a>
                         </div>
                     </div>
@@ -1605,10 +1794,10 @@
                 <div class="footer-column">
                     <h3>BGMI Resources</h3>
                     <ul class="footer-links">
+                        <li><a href="https://www.youtube.com/@Fnc-Sports440" target="_blank">YouTube Channel</a></li>
+                        <li><a href="https://www.instagram.com/team_fnaticorg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Team Instagram</a></li>
+                        <li><a href="https://www.instagram.com/ig__fncxeliterayop?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">FNCxEliteRaYoP Instagram</a></li>
                         <li><a href="#">Tournament Schedule</a></li>
-                        <li><a href="#">Player Streams</a></li>
-                        <li><a href="#">Game Guides</a></li>
-                        <li><a href="#">Community Events</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
